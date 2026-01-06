@@ -6,8 +6,6 @@ let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
-
 function getRandomNumber() {
     return Math.floor(Math.random() * 3);
 }
@@ -58,4 +56,10 @@ function playRound(humanChoice, computerChoice) {
     }
     return `You chose: ${humanChoice}. CPU chose: ${computerChoice}.
             \nYour Score: ${humanScore}, CPU Score: ${computerScore}`;
+}
+
+function playGame() {
+    for (let i =0; i < 5; i++){
+        playRound(humanSelection, computerSelection);
+    }
 }
